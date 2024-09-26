@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p class="text-zinc-500">This is in the layout page</p>
-    <slot></slot>
+  <div class="bg-[#f7f3ee] w-screen h-screen">
+    <slot />
   </div>
 </template>
