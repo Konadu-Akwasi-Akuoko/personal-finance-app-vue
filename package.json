@@ -41,6 +41,8 @@
     "jsdom": "^25.0.1",
     "lint-staged": "^15.2.10",
     "playwright-core": "^1.47.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "vitest": "^2.1.1"
   }
 }
