@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@hebilicious/vue-query-nuxt",
     "shadcn-nuxt",
+    "@vee-validate/nuxt",
+    "@formkit/auto-animate",
   ],
   shadcn: {
     /**
@@ -23,4 +25,3 @@ export default defineNuxtConfig({
     componentDir: "./components/ui",
   },
 });
-
