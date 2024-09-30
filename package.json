@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && prisma generate",
     "prepare": "husky",
-    "db-migrate" : "pnpm dlx prisma migrate dev --name init"
+    "db-migrate": "pnpm dlx prisma migrate dev --name init"
   },
   "dependencies": {
     "@hebilicious/vue-query-nuxt": "^0.3.0",
@@ -33,6 +33,7 @@
     "vee-validate": "^4.13.2",
     "vue": "latest",
     "vue-router": "latest",
+    "vue-sonner": "^1.2.1",
     "yup": "^1.4.0",
     "zod": "^3.23.8"
   },
@@ -45,9 +46,11 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tanstack/eslint-plugin-query": "^5.57.2",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^22.7.4",
     "@vee-validate/nuxt": "^4.13.2",
     "@vue/test-utils": "^2.4.6",
+    "bcrypt": "^5.1.1",
     "eslint": "^9.11.1",
     "husky": "^9.1.6",
     "jsdom": "^25.0.1",
