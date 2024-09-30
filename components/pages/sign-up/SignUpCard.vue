@@ -5,6 +5,7 @@ import Label from "~/components/ui/label/Label.vue";
 import { useForm } from "vee-validate";
 import * as yup from "yup";
 import { useAutoAnimate } from "@formkit/auto-animate/vue";
+import { toast } from "vue-sonner";
 
 const { $client } = useNuxtApp();
 
@@ -22,19 +23,40 @@ const { errors, defineField, validateField, handleSubmit } = useForm({
   validationSchema: schema,
 });
 
+const { mutate } = useMutation({
+  mutationFn: async ({
+    name,
+    email,
+    password,
+  }: {
+    name: string;
+    email: string;
+    password: string;
+  }) =>
+    await $client.signup.mutate({
+      name: name,
+      email: email,
+      password: password,
+    }),
+  onSuccess: (data) => {
+    toast(data.message, {
+      action: {
+        label: "Ok",
+      },
+    });
+  },
+});
+
 const [name, nameAttrs] = defineField("name");
 const [email, emailAttrs] = defineField("email");
 const [password, passwordAttrs] = defineField("password");
 
 const login = handleSubmit(async (values) => {
-  console.log(values);
-  const data = await $client.signup.mutate({
+  mutate({
     name: values.name,
     email: values.email,
     password: values.password,
   });
-
-  console.log("data from server: ", data);
 });
 </script>
 
