@@ -11,5 +11,5 @@ export const loginProcedure = publicProcedure
       .required(),
   )
   .mutation((req) => {
-    return { success: true };
+    return { success: true, req };
   });

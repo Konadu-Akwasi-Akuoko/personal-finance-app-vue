@@ -71,6 +71,9 @@ importers:
       vue-router:
         specifier: latest
         version: 4.4.5(vue@3.5.9(typescript@5.6.2))
+      vue-sonner:
+        specifier: ^1.2.1
+        version: 1.2.1
       yup:
         specifier: ^1.4.0
         version: 1.4.0
@@ -99,6 +102,9 @@ importers:
       '@tanstack/eslint-plugin-query':
         specifier: ^5.57.2
         version: 5.57.2(eslint@9.11.1(jiti@2.0.0))(typescript@5.6.2)
+      '@types/bcrypt':
+        specifier: ^5.0.2
+        version: 5.0.2
       '@types/node':
         specifier: ^22.7.4
         version: 22.7.4
@@ -108,6 +114,9 @@ importers:
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.6
+      bcrypt:
+        specifier: ^5.1.1
+        version: 5.1.1
       eslint:
         specifier: ^9.11.1
         version: 9.11.1(jiti@2.0.0)
@@ -1603,6 +1612,9 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
+  '@types/bcrypt@5.0.2':
+    resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
+
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
@@ -2123,6 +2135,10 @@ packages:
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
+  bcrypt@5.1.1:
+    resolution: {integrity: sha512-AGBHOG5hPYZ5Xl9KXzU5iKq9516yEmvCKDg3ecP5kX2aB6UqTeXZxk2ELnDgDm6BQSMlLt9rDB4LoSMx0rYwww==}
+    engines: {node: '>= 10.0.0'}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -3914,6 +3930,9 @@ packages:
     resolution: {integrity: sha512-7vbj10trelExNjFSBm5kTvZXXa7pZyKWx9RCKIyqe6I9Ev3IzGpQoqBP3a+cOdxY+pWj6VkP28n/2wWysBHD/A==}
     engines: {node: '>=10'}
 
+  node-addon-api@5.1.0:
+    resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
+
   node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
 
@@ -5532,6 +5551,9 @@ packages:
     resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
     peerDependencies:
       vue: ^3.2.0
+
+  vue-sonner@1.2.1:
+    resolution: {integrity: sha512-J5+TwkayiBkieYBG8PGk5PMys8+UZxDmT/CCaX9otDzRONRr5hgTgo2Fha2krUFnUw1d576jsNGXhmAL06ixfA==}
 
   vue@3.5.9:
     resolution: {integrity: sha512-nHzQhZ5cjFKynAY2beAm7XtJ5C13VKAFTLTgRYXy+Id1KEKBeiK6hO2RcW1hUjdbHMadz1YzxyHgQigOC54wug==}
@@ -7257,6 +7279,10 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
+  '@types/bcrypt@5.0.2':
+    dependencies:
+      '@types/node': 22.7.4
+
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
       '@types/node': 22.7.4
@@ -7955,6 +7981,14 @@ snapshots:
     optional: true
 
   base64-js@1.5.1: {}
+
+  bcrypt@5.1.1:
+    dependencies:
+      '@mapbox/node-pre-gyp': 1.0.11
+      node-addon-api: 5.1.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   binary-extensions@2.3.0: {}
 
@@ -9986,6 +10020,8 @@ snapshots:
       semver: 7.6.3
     optional: true
 
+  node-addon-api@5.1.0: {}
+
   node-addon-api@6.1.0:
     optional: true
 
@@ -11744,6 +11780,8 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.9(typescript@5.6.2)
+
+  vue-sonner@1.2.1: {}
 
   vue@3.5.9(typescript@5.6.2):
     dependencies:
