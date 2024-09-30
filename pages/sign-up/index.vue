@@ -2,6 +2,6 @@
 <template>
   <div class="flex h-full w-full flex-col lg:flex-row lg:p-5">
     <PagesLoginImage />
-    <PagesLoginCard />
+    <PagesSignUpCard />
   </div>
 </template>
