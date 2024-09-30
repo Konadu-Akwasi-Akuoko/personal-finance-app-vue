@@ -43,7 +43,7 @@ const login = handleSubmit(async (values) => {
     <div
       class="flex w-full max-w-[560px] flex-col gap-8 rounded-lg bg-white p-8"
     >
-      <h1 class="text-4xl font-bold">Login</h1>
+      <h1 class="text-4xl font-bold">Sign Up</h1>
       <form class="flex w-full flex-col gap-8" @submit.prevent="login()">
         <div ref="parentName" class="flex flex-col gap-2">
           <Label for="name">Name</Label>
