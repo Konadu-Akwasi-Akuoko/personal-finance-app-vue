@@ -19,7 +19,7 @@
     "@prisma/client": "5.20.0",
     "@tanstack/vue-query": "^5.56.2",
     "@trpc/client": "^10.45.2",
-    "@trpc/server": "^10.45.2",
+    "@trpc/server": "^10.45.3",
     "@vueuse/core": "^11.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
