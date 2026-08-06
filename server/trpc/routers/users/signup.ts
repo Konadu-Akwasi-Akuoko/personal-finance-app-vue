@@ -1,4 +1,4 @@
-import { publicProcedure } from "~/server/api/trpc/trpc";
+import { publicProcedure } from "~/server/trpc/trpc";
 import { z } from "zod";
 import { db } from "~/server/databse/db";
 import bcrypt from "bcrypt";

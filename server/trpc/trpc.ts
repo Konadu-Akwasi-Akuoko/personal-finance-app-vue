@@ -8,8 +8,9 @@
  * @see https://trpc.io/docs/server/procedures
  */
 import { initTRPC } from "@trpc/server";
+import type { Context } from "~/server/trpc/context";
 
-const t = initTRPC.create();
+const t = initTRPC.context<Context>().create();
 
 /**
  * Unprotected procedure
